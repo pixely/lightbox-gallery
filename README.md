@@ -22,15 +22,14 @@ performance that meets the requirements but offer the flexibility to change over
 
 As this code was written with a particular project in mind it has taken advantage of functionality available within the existing project as far as is possible. This list details the primary dependencies, the majority of which were pre-existing within the project.
 
-* jQuery
-* RequireJS
-* PubSub
-* Underscore
-* Remodal
-* Slick carousel (new dependency for this feature)
-* Internal dependencies
+* First-party dependencies
   * Ad manager to initialise advertising
   * Google Analytics helper to push events to Google Analytics via the dataLayer provided by Google Tag Manager
-  
- 
+* Third-party dependencies   
+ * jQuery
+ * RequireJS
+ * PubSub
+ * Underscore
+ * Remodal
+ * Slick carousel (new dependency for this feature)
 
