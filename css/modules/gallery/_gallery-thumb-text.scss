@@ -1,0 +1,27 @@
+﻿.gallery-thumb-text {
+    position: relative;
+    padding-bottom: 66.16%;
+
+    &__text {       
+        @include rem(font-size, 10px);
+        @include rem(line-height, 15px); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 0 4px;
+    }
+}
+
+@media (min-width: $screen-sm) {
+    .gallery-thumb-text {
+        &__text {  
+            font-size: inherit;
+        }
+    }
+}

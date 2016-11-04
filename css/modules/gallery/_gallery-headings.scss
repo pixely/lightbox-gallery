@@ -1,0 +1,15 @@
+﻿.gallery-headings {
+
+    &__heading {
+        color: $snowdrop;
+        margin-top: 0;
+    }
+
+    &__text {
+        &.wysiwyg-content {
+            @include rem(font-size, 15px);
+            @include rem(line-height, 24px);
+        }
+    }
+
+}

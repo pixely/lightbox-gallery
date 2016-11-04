@@ -1,0 +1,145 @@
+﻿.slider {
+
+    &__slide {
+        // Margin adjustment to fix safari issue with slick - https://github.com/kenwheeler/slick/issues/1868
+        margin: 0 1px;
+    }
+    
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $peabug;
+        padding: 20px 10px;        
+    }
+
+    &__thumbs {        
+        width: calc(100% - 70px);
+
+        .slick-track {
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+    }
+
+    &__thumb {
+        cursor: pointer;
+        border: 1px solid transparent;
+        transform: scale(0.75);
+        transition: all 0.2s linear;
+        
+        &.slick-current {
+            transform: scale(1);
+            width: 75px;
+        }
+
+        &--advert.slick-current,
+        &--endPlate.slick-current {
+            border-color: rgba($snowdrop, 0.8);
+        }
+    }
+
+    &__arrow {
+        @include hide-text();
+        transition: opacity 0.2s linear;
+        height: 25px;
+        width: 35px;
+
+        &.slick-disabled {
+            opacity: 0;
+            cursor: default;
+        }
+    }
+
+    &__content {
+        padding-top: 25px;
+    }
+
+    // disable the slider to force ad viewability
+    // scss-lint:disable MergeableSelector
+    &__nav.is-disabled {
+        pointer-events: none;
+        cursor: default;
+
+        .slick-slide,
+        .slick-disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .gallery-image__image {
+            transition: filter 0.2 linear;
+            filter: grayscale(100%);
+        }
+    }
+}
+
+// Landscape mobile only
+@media (max-width: $screen-sm) and (orientation: landscape) {
+
+    .slider {
+        
+        &__thumbs,
+        &__content {
+            // scss-lint:disable ImportantRule
+            display: none !important;
+        }
+
+        &__nav {
+            border: 0;
+            padding: 0;
+        }
+
+        &__arrow {
+            position: absolute;
+            top: calc(50% - 12px);
+
+            &--previous { 
+                left: 10px;
+            }
+
+            &--next {
+                right: 10px;
+            }
+
+        }
+    }
+
+}
+
+@media (min-width: $screen-sm) {
+
+    .slider {
+
+        &__nav {
+            padding-left: 65px;
+            padding-right: 65px;
+        }
+
+        &__thumbs {
+            width: 450px;
+        }
+
+        &__thumb {
+        
+            &.slick-current {
+                width: 150px;
+            }
+        }
+
+        &__arrow {
+            height: 55px;
+            width: 70px;
+        }
+    }
+}
+
+@media (min-width: $screen-md) {
+    .slider {
+
+        &__nav {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    }
+}

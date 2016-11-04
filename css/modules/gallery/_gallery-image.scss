@@ -1,0 +1,40 @@
+﻿.gallery-image {
+
+    &__credits {        
+        background-color: rgba($midnight, 0.5);        
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: $snowdrop;
+        margin: 0;
+        padding: 3px 0;
+    }
+}
+
+// Landscape mobile only
+@media (max-width: $screen-sm) and (orientation: landscape) {
+
+    .gallery-image {
+        height: 100vh;
+        padding-bottom: 0;
+
+        &__image {
+            object-fit: contain;
+        }
+
+    }
+
+}
+
+@media (min-width: $screen-sm) {
+    .gallery-image {
+
+    }
+}
+
+@media (min-width: $screen-md) {
+    .gallery-image {
+
+    }
+}

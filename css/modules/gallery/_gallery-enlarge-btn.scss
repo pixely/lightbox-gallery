@@ -1,0 +1,19 @@
+﻿.gallery-enlarge-btn {
+    @include text-hide();
+    cursor: pointer;
+    float: right;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 1px;
+    right: 1px;
+    z-index: 10;
+    transition: background-color 0.2s linear;
+    background-color: rgba($snowdrop, 0.6);
+
+    &:hover, 
+    &:focus, 
+    &:active {
+        background-color: rgba($snowdrop, 0.8);
+    }
+}

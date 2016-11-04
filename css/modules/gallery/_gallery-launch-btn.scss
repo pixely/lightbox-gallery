@@ -1,0 +1,29 @@
+﻿.gallery-launch-btn {
+
+    &__wrapper {
+        cursor: pointer;
+        background-color: $waterlily;
+        color: $snowdrop;
+        width: 200px;
+        height: 50px;
+        transition: background 0.2s linear;
+        display: inline-block;
+        text-align: center;
+
+        &:hover, 
+        &:focus, 
+        &:active {
+            background-color: darken($waterlily, 10%);
+            color: $snowdrop;
+        }
+    }
+
+    &__text { padding-left: 10px; }
+
+    &__icon {
+        position: relative;
+        top: 10px;
+        height: 30px;
+        width: 30px;
+    }
+}

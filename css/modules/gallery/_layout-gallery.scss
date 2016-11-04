@@ -1,0 +1,17 @@
+﻿.layout-gallery {
+    padding: 0;
+}
+
+// Tablet and above
+@media (min-width: $screen-sm) {
+    .layout-gallery {
+
+    }
+}
+
+// Desktop and above
+@media (min-width: $screen-md) {
+    .layout-gallery {
+        padding: 20px 80px;
+    }
+}

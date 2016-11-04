@@ -1,0 +1,58 @@
+﻿.gallery-slide-advert {
+    text-align: center;
+    border-bottom: 1px solid $peabug;
+    padding: 10px 0;
+
+    &__label {
+        visibility: visible;
+        transition: visibility 0.2s linear;
+        display: block;
+
+        &.is-hidden {
+            visibility: hidden;
+        }
+    }
+
+    &__label-link {
+        color: $snowdrop;
+
+        &:focus,
+        &:active,
+        &:hover {
+            color: darken($snowdrop, 10%);
+        }
+    }
+
+    &__advert {
+        height: 250px;
+        background-color: $wombat;
+    }
+}
+
+@media (min-width: $screen-sm) {
+    .gallery-slide-advert {
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 66.16%;
+        height: 0;
+        overflow: hidden;
+
+        &__ad-container {
+            max-width: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__label {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (min-width: $screen-md) {
+    .gallery-slide-advert {
+    }
+}

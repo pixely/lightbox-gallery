@@ -1,0 +1,39 @@
+﻿.gallery-related {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__heading {
+        
+        margin: 0 auto 15px;
+        text-align: left;
+    }
+    
+    &__item {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .related-article  .related-article__text-link {
+        &:hover,
+        &:active,
+        &:focus {
+            color: darken($snowdrop, 10%);
+        }
+    }
+}
+
+@media (min-width: $screen-sm) {
+    .gallery-related {
+        &__item {
+            &:nth-child(odd) { padding-left: 10px; }
+            &:nth-child(even) { padding-right: 10px; }
+        }
+    }
+}
+
+@media (min-width: $screen-md) {
+    .gallery-related {
+
+    }
+}

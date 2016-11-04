@@ -1,0 +1,26 @@
+﻿.gallery-content {
+
+    &__col-index { padding: 0; }
+
+    &__col-headings { text-align: left; }
+
+    &__index {
+        color: $snowdrop;
+        margin-bottom: 0;
+    }
+
+}
+
+@media (min-width: $screen-sm) {
+    .gallery-content {
+
+        &__col-shares { float: right; }
+
+    }
+}
+
+@media (min-width: $screen-md) {
+    .gallery-content {
+
+    }
+}

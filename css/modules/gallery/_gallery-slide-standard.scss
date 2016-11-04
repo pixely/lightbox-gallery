@@ -1,0 +1,24 @@
+﻿.gallery-slide-standard {
+    position: relative;
+}
+
+// Landscape mobile only
+@media (max-width: $screen-sm) and (orientation: landscape) {
+
+    .gallery-slide-standard {
+        height: 100vh;
+    }
+
+}
+
+@media (min-width: $screen-sm) {
+    .gallery-slide-standard {
+
+    }
+}
+
+@media (min-width: $screen-md) {
+    .gallery-slide-standard {
+
+    }
+}
